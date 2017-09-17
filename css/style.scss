@@ -1,0 +1,85 @@
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
+$button-color: #293A43;
+$cancel-color: #C9382E;
+$display-color: #E1E3E4;
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 32px;
+  background-color: #C4C4C4;
+}
+
+#calculator {
+  width: 240px;
+  height: 348px;
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+#display {
+  width: 222px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  border: 1px solid gray;
+  font-size: 40px;
+  text-align: right;
+  padding: 3px;
+  background-color: $display-color;
+}
+
+#buttons {
+  margin-top: 25px;
+}
+
+.button {
+  float: left;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: $button-color;
+  color: #FFFFFF;
+  border-radius: 25px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  & > #multiply {
+    line-height: 60px;
+  }
+
+  & > #decimal {
+    position: relative;
+    top: -8px;
+  }
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+[key=operator],
+[key=percent],
+[key=equals] {
+  background-color: lighten($button-color, 20%);
+}
+
+[key=cancel] {
+  background-color: $cancel-color;
+}
+
+.zero {
+  width: 110px;
+}
