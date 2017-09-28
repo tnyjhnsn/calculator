@@ -27,6 +27,7 @@ function createCalculator() {
 
   function number(num) {
     workingNum += workingNum.length === 10 ? "" : num;
+    workingNum = (workingNum === "00" ? 0 : workingNum);
     setDisplay(workingNum);
   }
 
